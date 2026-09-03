@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check-in do Evento</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div>
+      <h1>Check-in do Evento</h1>
+      <p>Um sistema de listagem de participantes de um evento</p>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <!-- main content -->
+    <div>
+      <div class="panel">
+        <h2>Cadastrar participante</h2>
+        <div class="field">
+          <label for="in-nome">Nome</label>
+          <input id="in-nome" type="text" placeholder="Ex: Ana Beatriz Souza">
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="in-idade">Idade</label>
+            <input id="in-idade" type="number" min="0" placeholder="Ex: 27">
+          </div>
+          <div class="field">
+            <label for="in-ocupacao">Ocupação</label>
+            <input id="in-ocupacao" type="text" placeholder="Ex: Desenvolvedora">
+          </div>
+        </div>
+        <div class="field">
+          <label for="in-formacao">Formação</label>
+          <input id="in-formacao" type="text" placeholder="Ex: Ciência da Computação">
+        </div>
+        <div id="erro"></div>
+        <button id="btn-cadastrar">Cadastrar e gerar crachá</button>
+      </div>
+
+      <div class="panel" style="margin-top:20px;">
+        <h2>Participantes (<span id="contador">0</span>)</h2>
+        <div class="lista" id="lista"></div>
+      </div>
+
+      <div id="console-box"></div>
+    </div>
+
+    <!-- COLUNA DIREITA: PDF do crachá -->
+    <div class="created-crachar-pdf"></div>
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
